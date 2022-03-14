@@ -1,0 +1,342 @@
+/* Start settings pox */
+.settings-box {
+  position: fixed;
+  left: -200px;
+  top: 0;
+  background-color: rgb(12, 12, 12);
+  width: 200px;
+  z-index: 1000;
+  min-height: 100vh;
+  transition: 0.5s;
+}
+.settings-box.open {
+  left: 0;
+}
+.settings-box .toggel-settings {
+  position: absolute;
+  right: -30px;
+  top: 100px;
+  background-color: #fff;
+  text-align: center;
+  cursor: pointer;
+  z-index: 500;
+  box-shadow: inset 0px 0px 5px var(--main-color), 0px 0px 1px var(--main-color),
+    0px 0px 2px var(--main-color), 0px 0px 4px var(--main-color),
+    0px 0px 8px var(--main-color);
+}
+.settings-box .toggel-settings .fa-gear {
+  width: 30px;
+  padding: 8px 0;
+}
+.settings-box .toggel-settings .fa-gear.fa-spin {
+  color: #fff;
+}
+.settings-box .option-box {
+  padding: 20px;
+  text-align: center;
+  background-color: #000000;
+  margin: 5px;
+}
+
+.settings-box .option-box h4 {
+  margin: 0;
+  color: #666;
+  font-size: 13px;
+}
+.settings-box .option-box .color-list {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  margin: 20px 0 0;
+}
+.settings-box .option-box .color-list li {
+  width: 20px;
+  height: 20px;
+  background-color: #333;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+.settings-box .option-box .color-list li.active {
+  box-shadow: inset 0px 0px 30px #fff, 0px 0px 5px var(--main-color),
+    0px 0px 10px var(--main-color), 0px 0px 15px var(--main-color),
+    0px 0px 20px var(--main-color), 0px 0px 25px var(--main-color);
+}
+.settings-box .option-box .color-list li:nth-child(1) {
+  background-color: #03a9f4;
+}
+.settings-box .option-box .color-list li:nth-child(2) {
+  background-color: #e91e63;
+}
+.settings-box .option-box .color-list li:nth-child(3) {
+  background-color: #ff00ff;
+}
+.settings-box .option-box .color-list li:nth-child(4) {
+  background-color: #ff9800;
+}
+.settings-box .option-box .color-list li:nth-child(5) {
+  background-color: #33b638;
+}
+/* Start random BG settings pox */
+.settings-box .option-box:nth-child(2) span {
+  width: 40px;
+  display: inline-block;
+  height: 20px;
+  color: #fff;
+  background-color: var(--main-color);
+  margin-top: 15px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 13px;
+  padding: 3px 10px;
+  font-weight: bold;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.settings-box .option-box:nth-child(2) span.active {
+  color: #000000;
+  box-shadow: inset 0px 0px 50px #fff, 0px 0px 2px var(--main-color),
+    0px 0px 4px var(--main-color), 0px 0px 8px var(--main-color),
+    0px 0px 10px var(--main-color), 0px 0px 15px var(--main-color);
+}
+/* End random BG settings pox */
+/* End settings pox */
+
+/* Start Nav Bullets */
+.navBullets {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  z-index: 1000;
+  margin-right: 10px;
+}
+.navBullets .bullet {
+  width: 20px;
+  height: 20px;
+  background-color: var(--main-color);
+  border: 3px solid var(--main-color);
+  border-radius: 50%;
+  margin: 20px auto;
+  transition: 0.3s ease-in-out;
+  position: relative;
+  cursor: pointer;
+}
+.navBullets .bullet::before {
+  content: var(--section-name);
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  background-color: transparent;
+  left: -120px;
+  top: -10px;
+  color: var(--main-color);
+  line-height: 30px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: inset 0px 0px 5px var(--main-color), 0px 0px 2px var(--main-color),
+    0px 0px 4px var(--main-color), 0px 0px 8px var(--main-color),
+    0px 0px 10px var(--main-color), 0px 0px 15px var(--main-color);
+  display: none;
+  transition: all 0.3s;
+}
+.navBullets .bullet::after {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent var(--main-color);
+  position: absolute;
+  background-color: transparent;
+  left: -20px;
+  top: -5px;
+  z-index: 2;
+  display: none;
+}
+.navBullets .bullet:hover {
+  background-color: var(--main-color);
+  background-color: #f6f6f6;
+  box-shadow: inset 0px 0px 30px #fff, 0px 0px 5px var(--main-color),
+    0px 0px 10px var(--main-color), 0px 0px 15px var(--main-color),
+    0px 0px 20px var(--main-color), 0px 0px 25px var(--main-color);
+}
+.navBullets .bullet:hover::before,
+.navBullets .bullet:hover::after {
+  display: block;
+}
+/* End Nav Bullets */
+
+/* Start landing page */
+.landing-page {
+  min-height: 100vh;
+  background-image: url(/src/assets/BG01.jpg);
+  background-size: cover;
+  position: relative;
+}
+.landing-page .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.header-area {
+  position: relative;
+  color: #fff;
+  z-index: 2;
+  display: flex;
+  padding: 10px;
+  line-height: 30px;
+}
+.header-area .logo {
+  flex: 1;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  padding: 15px;
+  /* padding-left: 80px; */
+  font-weight: normal;
+  text-shadow: 0px 0px 4px var(--main-color), 0px 0px 8px var(--main-color);
+  color: white;
+  font-size: 30px;
+  transition: all 0.5s, text-shadow 0s;
+}
+.header-area .links {
+  list-style: none;
+  padding-left: 0;
+  padding-right: 20px;
+  width: 100%;
+  text-align: right;
+  font-size: 20px;
+  flex: 1;
+}
+.header-area .links a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.5s, color 0s;
+}
+.header-area .links a:hover,
+.header-area .links a.active {
+  text-shadow: 0px 0px 4px var(--main-color), 0px 0px 8px var(--main-color);
+  color: white;
+}
+.header-area .links li {
+  display: inline-block;
+  margin-left: 10px;
+}
+.introduction-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  transition: all 0.5s, color 0s;
+}
+.introduction-text h1 {
+  font-size: 34px;
+  margin: 0 0 12px;
+  transition: inherit;
+}
+.introduction-text h1 span {
+  color: var(--main-color);
+  transition: inherit;
+}
+.introduction-text p {
+  line-height: 1.6;
+  font-size: 20px;
+  margin: 0 auto;
+  width: 80vw;
+  text-align: center;
+}
+/* End landing page */
+
+/* Media Queries */
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+  /* landingPage */
+  .header-area {
+    justify-items: center;
+  }
+  .header-area .logo {
+    padding: 15px 0;
+    margin: auto;
+    font-size: 50px;
+    flex: 1;
+    position: absolute;
+    left: 50%;
+    top: 15vh;
+    text-align: center;
+    transform: translate(-50%, 0);
+  }
+  .header-area .links {
+    display: none;
+  }
+  .introduction-text {
+    top: 55vh;
+  }
+  .introduction-text h1 {
+    font-size: 30px;
+    margin: 0 0 12px;
+  }
+  .introduction-text p {
+    line-height: 1.2;
+    font-size: 15px;
+  }
+  /* End landingPage */
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 601px) and (max-width: 767px) {
+  .container {
+    max-width: 540px;
+  }
+  /* landingPage */
+  .header-area .logo {
+    padding: 15px 0;
+    font-size: 25px;
+    flex: 1.5;
+  }
+  .header-area .links {
+    padding-right: 0px;
+    font-size: 15px;
+    flex: 2;
+  }
+  .header-area .links li {
+    margin-left: 5px;
+  }
+  /* End landingPage */
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .container {
+    max-width: 720px;
+  }
+  /* landingPage */
+  .header-area .logo {
+    padding: 15px 0;
+    font-size: 30px;
+    flex: 1.5;
+  }
+  .header-area .links {
+    padding-right: 0px;
+    font-size: 20px;
+    flex: 2;
+  }
+  .header-area .links li {
+    margin-left: 5px;
+  }
+  /* End landingPage */
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 83.5vw;
+  }
+}

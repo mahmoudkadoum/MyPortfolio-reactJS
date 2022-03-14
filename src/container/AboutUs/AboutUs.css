@@ -1,0 +1,143 @@
+/* Start About Us page */
+.aboutPage {
+  display: flex;
+}
+.about-us {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  /* display: flex; */
+  flex: 1;
+  position: relative;
+}
+.about-us .BG {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #efced9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: hue-rotate(200deg);
+}
+.about-us .info-box {
+  position: absolute;
+  top: 50%;
+  left: 7.5vw;
+  transform: translateY(-50%);
+}
+.about-us .info-box h2 {
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+  margin: 0px 0px 40px;
+  text-shadow: 0px 0px 4px var(--main-color), 0px 0px 8px var(--main-color),
+    0px 0px 20px var(--main-color), 0px 0px 40px var(--main-color);
+}
+.about-us .info-box p {
+  line-height: 1.5;
+  color: var(--main-color);
+  margin: 0;
+  font-size: 2.2ch;
+  text-align: justify;
+}
+
+.aboutPage .image-box {
+  flex: 1;
+  text-align: center;
+}
+/* Start 3d Animation Banner */
+.bannerBkg {
+  width: 100%;
+  background: #dddddd;
+  filter: hue-rotate(210deg);
+}
+.banner {
+  width: 100%;
+  margin: 0px auto;
+  max-width: 1700px;
+  z-index: 99;
+  position: relative;
+  text-align: center;
+}
+.banner img {
+  width: 100%;
+  height: auto;
+}
+.bannerBottom {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 101;
+}
+.bannerPhoto {
+  position: absolute;
+  width: 22.24%;
+  top: 34.86%;
+  left: 23.7%;
+  z-index: 102;
+}
+.bannerText {
+  position: absolute;
+  width: 16.4%;
+  top: 50.3%;
+  left: 47.12%;
+  z-index: 103;
+}
+.bannerButton1 {
+  position: absolute;
+  width: 2.16%;
+  top: 22.17%;
+  left: 63.8%;
+  z-index: 104;
+}
+.bannerButton2 {
+  position: absolute;
+  width: 2.32%;
+  top: 22.17%;
+  left: 65.44%;
+  z-index: 105;
+}
+.bannerButton3 {
+  position: absolute;
+  width: 2.88%;
+  top: 22.1%;
+  left: 67.24%;
+  z-index: 106;
+}
+.bannerTree1 {
+  position: absolute;
+  width: 9.02%;
+  top: 54.34%;
+  left: 14.66%;
+  z-index: 107;
+}
+.bannerTree2 {
+  position: absolute;
+  width: 10.63%;
+  top: 50.3%;
+  left: 71.26%;
+  z-index: 109;
+}
+.bannerTree3 {
+  position: absolute;
+  width: 11.48%;
+  top: 40.1%;
+  left: 77.78%;
+  z-index: 108;
+}
+.bannerClock {
+  position: absolute;
+  width: 9.6%;
+  top: 13.65%;
+  left: 16.76%;
+  z-index: 110;
+}
+.bannerClock2 {
+  position: absolute;
+  width: 9.6%;
+  top: 13.65%;
+  left: 16.76%;
+  z-index: 111;
+}
+/* End 3d Animation Banner */
+/* End About Us page */
