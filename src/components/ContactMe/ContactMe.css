@@ -1,7 +1,7 @@
 /* Start Contact me */
 .contact {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 110px;
+  padding-bottom: 10px;
   min-height: 100vh;
   background-size: cover;
   background-color: #333;
@@ -37,7 +37,7 @@
   position: relative;
   max-width: 1000px;
   margin: auto;
-  margin-top: 130px;
+  margin-top: 90px;
 }
 .contact form .left {
   float: left;
@@ -102,3 +102,92 @@
     0px 0px 14px var(--main-color);
 }
 /* End Contact me */
+
+/* <---------- Media Query ----------> */
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+    /* contactPage */
+    .contact {
+      padding-bottom: 0;
+      padding-top: 10vh;
+      min-height: 100vh;
+    }
+    .contact h2 {
+      margin: 3vh;
+    }
+    .contact img {
+      display: none;
+    }
+    .contact form .left {
+      width: 100%;
+    }
+    .contact form .right {
+      width: 100%;
+    }
+    .contact form {
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+    }
+    .contact form input[type="submit"] {
+      margin: 50px auto;
+      width: 60vw;
+      margin-left: auto;
+    }
+    /* End contactPage */
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 601px) and (max-width: 767px) {
+  /* contactPage */
+  .contact {
+    padding-bottom: 0;
+    padding-top: 10vh;
+    min-height: 100vh;
+  }
+  .contact h2 {
+    margin: 3vh;
+  }
+  .contact img {
+    display: none;
+  }
+  .contact form {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
+  .contact form .left,
+  .contact form .right {
+    float: none;
+    width: 100%;
+  }
+  .contact form input[type="submit"] {
+    margin: 50px auto;
+    width: 60vw;
+    margin-left: auto;
+  }
+  /* End contactPage */
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /* contactPage */
+  .contact img {
+    top: 50%;
+    transform: translateY(-50%) scale(1.2);
+  }
+  .contact h2 {
+    margin: 50px 0px 0px;
+  }
+  .contact form {
+    padding: 30px 20px;
+    position: relative;
+    max-width: 90vw;
+    margin-top: 50px;
+  }
+  /* End contactPage */
+}

@@ -166,6 +166,60 @@
 }
 /* End Nav Bullets */
 
+/* Start Custom  Page Scroll Progress Bar */
+html::-webkit-scrollbar {
+  width: 0.5vw;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: #797979;
+}
+html::-webkit-scrollbar-thumb:hover {
+  background-color: var(--main-color);
+}
+html::-webkit-scrollbar-track {
+  background-color: #a8a8a8;
+}
+
+#scrollProgressBar {
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 5px;
+  background-color: var(--main-color);
+}
+#scrollProgressBar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(10px);
+  background: var(--main-color);
+}
+#scrollProgressBar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(30px);
+  background: var(--main-color);
+}
+#scrollPath {
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background-color: var(--main-color);
+  opacity: 0.1;
+}
+/* End Custom  Page Scroll Progress Bar */
+
 /* Start landing page */
 .landing-page {
   min-height: 100vh;
@@ -181,48 +235,6 @@
   left: 0;
   top: 0;
   z-index: 1;
-}
-.header-area {
-  position: relative;
-  color: #fff;
-  z-index: 2;
-  display: flex;
-  padding: 10px;
-  line-height: 30px;
-}
-.header-area .logo {
-  flex: 1;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  padding: 15px;
-  /* padding-left: 80px; */
-  font-weight: normal;
-  text-shadow: 0px 0px 4px var(--main-color), 0px 0px 8px var(--main-color);
-  color: white;
-  font-size: 30px;
-  transition: all 0.5s, text-shadow 0s;
-}
-.header-area .links {
-  list-style: none;
-  padding-left: 0;
-  padding-right: 20px;
-  width: 100%;
-  text-align: right;
-  font-size: 20px;
-  flex: 1;
-}
-.header-area .links a {
-  color: #fff;
-  text-decoration: none;
-  transition: all 0.5s, color 0s;
-}
-.header-area .links a:hover,
-.header-area .links a.active {
-  text-shadow: 0px 0px 4px var(--main-color), 0px 0px 8px var(--main-color);
-  color: white;
-}
-.header-area .links li {
-  display: inline-block;
-  margin-left: 10px;
 }
 .introduction-text {
   position: absolute;
@@ -252,27 +264,10 @@
 }
 /* End landing page */
 
-/* Media Queries */
+/* <---------- Media Query ----------> */
 /* Extra small devices (phones, 600px and down) */
 @media (max-width: 600px) {
   /* landingPage */
-  .header-area {
-    justify-items: center;
-  }
-  .header-area .logo {
-    padding: 15px 0;
-    margin: auto;
-    font-size: 50px;
-    flex: 1;
-    position: absolute;
-    left: 50%;
-    top: 15vh;
-    text-align: center;
-    transform: translate(-50%, 0);
-  }
-  .header-area .links {
-    display: none;
-  }
   .introduction-text {
     top: 55vh;
   }
@@ -291,52 +286,10 @@
   .container {
     max-width: 540px;
   }
-  /* landingPage */
-  .header-area .logo {
-    padding: 15px 0;
-    font-size: 25px;
-    flex: 1.5;
-  }
-  .header-area .links {
-    padding-right: 0px;
-    font-size: 15px;
-    flex: 2;
-  }
-  .header-area .links li {
-    margin-left: 5px;
-  }
-  /* End landingPage */
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .container {
     max-width: 720px;
-  }
-  /* landingPage */
-  .header-area .logo {
-    padding: 15px 0;
-    font-size: 30px;
-    flex: 1.5;
-  }
-  .header-area .links {
-    padding-right: 0px;
-    font-size: 20px;
-    flex: 2;
-  }
-  .header-area .links li {
-    margin-left: 5px;
-  }
-  /* End landingPage */
-}
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .container {
-    max-width: 960px;
-  }
-}
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  .container {
-    max-width: 83.5vw;
   }
 }

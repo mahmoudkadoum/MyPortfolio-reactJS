@@ -1,7 +1,7 @@
 /* Start Skills */
 .skills {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 95px;
+  padding-bottom: 30px;
   background: radial-gradient(
     circle at 50%,
     #333,
@@ -12,6 +12,7 @@
   transition: 2s;
   position: relative;
   box-shadow: inset 5px 15px 70px black;
+  max-height: 100vh;
 }
 
 .skills h2 {
@@ -35,11 +36,11 @@
   font-weight: bold;
   width: 140px;
   text-align: center;
-  line-height: 30px;
+  line-height: 20px;
   color: white;
 }
 .skills .skill-box .skill-progress {
-  height: 30px;
+  height: 20px;
   width: 100%;
   background-color: transparent;
   border-radius: 8px;
@@ -61,7 +62,7 @@
 .skills .skill-box .skill-progress span {
   text-align: center;
   font-weight: bolder;
-  line-height: 30px;
+  line-height: 20px;
   color: #fff;
   position: absolute;
   border-radius: inherit;
@@ -81,3 +82,62 @@
   color: var(--main-color);
 }
 /* End Skills */
+
+
+/* <---------- Media Query ----------> */
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+  /* Start Skills */
+  .skills {
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+  .skills h2 {
+    margin: 0px 0px 30px;
+  }
+  .skills .skill-box {
+    width: 75vw;
+    padding: 15px;
+    margin: 0 auto 10px auto;
+  }
+  .skills .skill-box .skill-name {
+    width: 100%;
+    line-height: 10px;
+  }
+  .skills .skill-box .skill-progress {
+    height: 20px;
+  }
+  .skills .skill-box .skill-progress span {
+    line-height: 20px;
+  }
+  /* End Skills */
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 601px) and (max-width: 767px) {
+    /* Start Skills */
+  .skills {
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+  .skills h2 {
+    margin: 0px 0px 30px;
+  }
+  .skills .skill-box {
+    display: block;
+    width: 75vw;
+    padding: 15px;
+    margin: 0 auto 10px auto;
+  }
+  .skills .skill-box .skill-name {
+    width: 100%;
+    margin-bottom: 15px;
+    line-height: 10px;
+  }
+  .skills .skill-box .skill-progress {
+    height: 20px;
+  }
+  .skills .skill-box .skill-progress span {
+    line-height: 20px;
+  }
+  /* End Skills */
+}

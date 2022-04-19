@@ -1,0 +1,38 @@
+/* Start Gallery page */
+.gallery {
+  padding-top: 125px;
+  padding-bottom: 125px;
+  position: relative;
+  height: 100vh;
+}
+.gallery .BG {
+  width: 100%;
+  min-height: 100%;
+  background-color: #efced9;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: hue-rotate(200deg);
+}
+.gallery .container h2 {
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--main-color);
+  margin: 0 0 50px;
+  text-align: center;
+}
+.gallery .imgBox {
+  text-align: center;
+}
+.gallery .imgBox>img {
+  width: 200px;
+  padding: 3px;
+  background-color: #f6f6f6;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  margin: 5px 5px;
+  cursor: pointer;
+}
+
+/* End Gallery page */
